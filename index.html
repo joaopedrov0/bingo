@@ -9,68 +9,93 @@
 
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="balls.css">
+    <link rel="stylesheet" href="fichas.css">
 </head>
 <body>
-    <div class="section" id="menu">
-        <h1>Bingo!</h1>
+    <div class="main-body">
+        <div class="modal-box">
+            <div class="btn-ficha-close" onclick="fecharModal()">X</div>
+            <h2>Não tem fichas para jogar? Crie aqui!</h2>
+            <div class="pessoas">
+                <input type="text" name="pessoas" id="pessoas" placeholder="Digite o nome de quem vai jogar.">
+                <div class="add" onclick="adicionarJogador()">Adicionar jogador</div>
+            </div>
+            <div class="row finally-box">
+                <div class="player-list">
+                    <ul class="players">
 
-        <input class="btn" type="button" value="Sortear novo número!" onclick="sortearNumero()">
-
-        <div class="last-box">
-            <p>Ultimo número!</p>
-            <div class="last-number">?</div>
+                    </ul>
+                </div>
+                <div class="btn" onclick="gerarFichas()">Gerar fichas</div>
+            </div>
+            
+            <div class="fichas"></div>
+            
         </div>
-        
-    </div>
-    <div class="section" id="numbers">
-        <div class="column">
+        <div class="btn-ficha" onclick="abrirModal()">Criar fichas</div>
+        <div class="section" id="menu">
+            <h1>Bingo!</h1>
+
+            <input id="playBtn" class="btn" type="button" value="Sortear novo número!" onclick="sortearNumero()">
+
+            <div class="last-box">
+                <p>Ultimo número!</p>
+                <div class="last-number">?</div>
+            </div>
+            
+        </div>
+        <div class="section" id="numbers">
             <div class="column">
-                <div class="row">
-                    <div id="n1" class="ball">1</div>
-                    <div id="n2" class="ball">2</div>
-                    <div id="n3" class="ball">3</div>
-                    <div id="n4" class="ball">4</div>
-                    <div id="n5" class="ball">5</div>
-                </div>
-                <div class="row">
-                    <div id="n6" class="ball">6</div>
-                    <div id="n7" class="ball">7</div>
-                    <div id="n8" class="ball">8</div>
-                    <div id="n9" class="ball">9</div>
-                    <div id="n10" class="ball">10</div>
-                </div>
-                <div class="row">
-                    <div id="n11" class="ball">11</div>
-                    <div id="n12" class="ball">12</div>
-                    <div id="n13" class="ball">13</div>
-                    <div id="n14" class="ball">14</div>
-                    <div id="n15" class="ball">15</div>
-                </div>
-                <div class="row">
-                    <div id="n16" class="ball">16</div>
-                    <div id="n17" class="ball">17</div>
-                    <div id="n18" class="ball">18</div>
-                    <div id="n19" class="ball">19</div>
-                    <div id="n20" class="ball">20</div>
-                </div>
-                <div class="row">
-                    <div id="n21" class="ball">21</div>
-                    <div id="n22" class="ball">22</div>
-                    <div id="n23" class="ball">23</div>
-                    <div id="n24" class="ball">24</div>
-                    <div id="n25" class="ball">25</div>
-                </div>
-                <div class="row">
-                    <div id="n26" class="ball">26</div>
-                    <div id="n27" class="ball">27</div>
-                    <div id="n28" class="ball">28</div>
-                    <div id="n29" class="ball">29</div>
-                    <div id="n30" class="ball">30</div>
-                </div>
+                
+                    <div class="row">
+                        <div id="n1" class="ball">1</div>
+                        <div id="n2" class="ball">2</div>
+                        <div id="n3" class="ball">3</div>
+                        <div id="n4" class="ball">4</div>
+                        <div id="n5" class="ball">5</div>
+                    </div>
+                    <div class="row">
+                        <div id="n6" class="ball">6</div>
+                        <div id="n7" class="ball">7</div>
+                        <div id="n8" class="ball">8</div>
+                        <div id="n9" class="ball">9</div>
+                        <div id="n10" class="ball">10</div>
+                    </div>
+                    <div class="row">
+                        <div id="n11" class="ball">11</div>
+                        <div id="n12" class="ball">12</div>
+                        <div id="n13" class="ball">13</div>
+                        <div id="n14" class="ball">14</div>
+                        <div id="n15" class="ball">15</div>
+                    </div>
+                    <div class="row">
+                        <div id="n16" class="ball">16</div>
+                        <div id="n17" class="ball">17</div>
+                        <div id="n18" class="ball">18</div>
+                        <div id="n19" class="ball">19</div>
+                        <div id="n20" class="ball">20</div>
+                    </div>
+                    <div class="row">
+                        <div id="n21" class="ball">21</div>
+                        <div id="n22" class="ball">22</div>
+                        <div id="n23" class="ball">23</div>
+                        <div id="n24" class="ball">24</div>
+                        <div id="n25" class="ball">25</div>
+                    </div>
+                    <div class="row">
+                        <div id="n26" class="ball">26</div>
+                        <div id="n27" class="ball">27</div>
+                        <div id="n28" class="ball">28</div>
+                        <div id="n29" class="ball">29</div>
+                        <div id="n30" class="ball">30</div>
+                    </div>
+                
             </div>
         </div>
     </div>
-
+    
+    <div id="fichas"></div>
+    <script src="fichas.js"></script>
     <script src="bingo.js"></script>
 </body>
 </html>

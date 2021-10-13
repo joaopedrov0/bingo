@@ -1,4 +1,17 @@
 body{
+    padding: 0;
+    border: none;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main-body{
     display: flex;
     flex-direction: row;
 
@@ -6,8 +19,6 @@ body{
     margin: 0;
     border: none;
     overflow: hidden;
-
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1{
@@ -98,9 +109,13 @@ h1{
     background-color: rgb(40, 167, 40) !important;
 }
 
+hr{
+    opacity: 30%;
+}
+
 
 @media screen and (max-width: 500px){
-    body{
+    .main-body{
         flex-direction: column;
         overflow-x: hidden;
         overflow-y: scroll;
