@@ -7,12 +7,13 @@
     top: 5px;
     left: 5px;
     height: 7px;
-    background-color: #fff;
+    background-color: rgb(192, 104, 104);
+    color: white;
 
     content: "?";
 
     border: 1px solid rgba(136, 136, 136, 0.118);
-    padding: 5px;
+    padding: 7px;
     border-radius: 5px;
 
     box-shadow: 0px 0px 10px rgba(130, 130, 130, 0.611);
@@ -21,7 +22,7 @@
 .modal-box{
     display: none;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     width: 90%;
     background-color: rgba(255, 255, 255, 0.659);
     backdrop-filter: blur(10px);
@@ -34,6 +35,10 @@
     overflow-y: auto;
 
     max-height: 90vh;
+
+    box-shadow: 3px 3px 10px rgba(169, 169, 169, 0.796);
+
+    z-index: 5;
 }
 
 input[type="text"]{
@@ -130,6 +135,7 @@ input[type="text"]{
 
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .ficha{

@@ -3,7 +3,9 @@ let listNFichas = []
 
 let modal = document.querySelector('.modal-box')
 
-function abrirModal(){modal.style.display = "flex"}
+document.addEventListener('keyup', (event) => {if(event.key == 'Enter'){adicionarJogador()}})
+
+function abrirModal(){closeSettings();modal.style.display = "flex"}
 function fecharModal(){modal.style.display = "none"}
 function adicionarJogador(){
     let jogador = document.querySelector('#pessoas').value
@@ -32,7 +34,7 @@ function gerarFichas(){
     for(let i = 0; i < players.length; i++){
         let currentPlayer = players[i]
         let seqNumbers = gerarNumerosFicha()
-        seqNumbers.sort()
+        
         listNFichas.push(seqNumbers)
         campoFichas.innerHTML += `
         <div class="ficha">
@@ -65,20 +67,39 @@ function gerarFichas(){
     players = []
     document.querySelector('.players').innerHTML = ''
     fecharModal()
+    scrolling(679)
 }
 
 function gerarNumerosFicha(){
     let numbers = []
     while(numbers.length < 12){
-        let currentNumber = parseInt((Math.random() * 30) + 1)
+        let currentNumber = parseInt((Math.random() * ballqtd) + 1)
         if(numbers.indexOf(currentNumber) == -1){
             numbers.push(currentNumber)
         }
     }
     if(listNFichas.indexOf(numbers) == -1){
+        numbers.sort((a, b) => {
+            if(a > b){
+                return 1
+            } else if(a < b){
+                return -1
+            }
+            return 0
+        })
         return numbers
     } else {
         gerarNumerosFicha()
     }
     
+}
+
+function scrolling(x){
+    window.scrollTo(0, x)
+}
+
+function cleanFichas(){
+    players = []
+    listN = []
+    gerarFichas()
 }

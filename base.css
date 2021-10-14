@@ -9,6 +9,8 @@ body{
     overflow-x: hidden;
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    scroll-behavior: smooth;
 }
 
 .main-body{
@@ -106,11 +108,12 @@ h1{
 
 
 .active{
-    background-color: rgb(40, 167, 40) !important;
+    background-color: #4caf50 !important;
 }
 
 hr{
     opacity: 30%;
+    z-index: 0;
 }
 
 
