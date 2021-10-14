@@ -42,9 +42,15 @@
 
     max-height: 90vh;
 
-    box-shadow: 3px 3px 10px rgba(169, 169, 169, 0.796);
+    /*box-shadow: 3px 3px 10px rgba(169, 169, 169, 0.796);*/
 
     z-index: 5;
+    
+}
+
+/*TODAS AS TRANSIÇÕES*/
+.config-btn-open, .config-btn-close, .qtd-btn, .btn-ficha, .btn-ficha-close, .active{
+    transition:all 200ms ease;
 }
 
 .config-btn-open:hover, .config-btn-close:hover{

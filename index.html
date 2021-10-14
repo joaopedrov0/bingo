@@ -15,7 +15,10 @@
     <link rel="stylesheet" href="config.css">
 </head>
 <body>
-    
+    <!--ATALHOS DE CELULAR-->
+    <div class="btn-number-generate" onclick="sortearNumero()"><i class="material-icons">casino</i></div>
+
+    <div id="block" onclick="closeSettings(); fecharModal()"></div>
     
     <div class="main-body">
         <div id="config-modal">
@@ -29,12 +32,19 @@
                 <div class="ball qtd-btn" onclick="setBallQtd(60)">60</div>
                 <div class="ball qtd-btn" onclick="setBallQtd(99)">99</div>
             </div>
+            <h3 class="hidden-on-phone">Atalhos para computador</h3>
+            <ul class="hidden-on-phone">
+                <li>Sortear número > 1</li>
+                <li>Abrir "Criar fichas" > 2</li>
+                <li>Abrir Configurações > 3</li>
+                <li>Fechar "Criar fichas" ou Configurações > ESC</li>
+            </ul>
         </div>
         <div class="modal-box">
             <div class="btn-ficha-close" onclick="fecharModal()"><i class="material-icons">close</i></div>
             <h2>Não tem fichas para jogar? Crie aqui!</h2>
             <div class="pessoas">
-                <input onblur="inputBlur()" onfocus="inputFocus()" type="text" name="pessoas" id="pessoas" placeholder="Digite o nome de quem vai jogar.">
+                <input type="text" name="pessoas" id="pessoas" placeholder="Digite o nome de quem vai jogar.">
                 <div class="add" onclick="adicionarJogador()">Adicionar jogador</div>
             </div>
             <div class="row finally-box">

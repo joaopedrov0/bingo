@@ -5,8 +5,16 @@ let modal = document.querySelector('.modal-box')
 
 document.addEventListener('keyup', (event) => {if(event.key == 'Enter'){adicionarJogador()}})
 
-function abrirModal(){closeSettings();modal.style.display = "flex"}
-function fecharModal(){modal.style.display = "none"}
+function abrirModal(){
+    
+    closeSettings()
+    modal.style.display = "flex"
+    modalBlock(1)
+}
+function fecharModal(){
+    modalBlock(0)
+    modal.style.display = "none"
+}
 function adicionarJogador(){
     let jogador = document.querySelector('#pessoas').value
     let playerList = document.querySelector('ul.players')

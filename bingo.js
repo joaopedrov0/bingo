@@ -32,7 +32,7 @@ function sortearNumero(){
 
 function verificarVitoria(){
     let winners = []
-    let listFicha = document.body.childNodes[3].querySelectorAll('.ficha')
+    let listFicha = document.body.childNodes[9].querySelectorAll('.ficha')
     for(let pos = 0; pos < listFicha.length; pos++){
         let activeList = document.querySelectorAll(`.ficha:nth-child(${pos + 1}) .active`)
         if(activeList.length == 12){
