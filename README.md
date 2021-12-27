@@ -20,7 +20,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 ## ☕ Usando o app
 
-Para usar <nome_do_projeto>, clique [aqui](https://joaopedrov0.github.io/bingo)
+Para usar o app, clique [aqui](https://joaopedrov0.github.io/bingo)
 
 Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Fornece uma referência de opções para pontos de bônus!
 
